@@ -1,3 +1,3 @@
 <div class="d-inline-flex flex-wrap justify-content-around">
-  <greeter person="person" ng-repeat="person in vm.people"></greeter>
+  <greeter [person]="person" *ngFor="let person of people"></greeter>
 </div>

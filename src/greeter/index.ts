@@ -1,7 +1,7 @@
 'use strict';
 
 // import libs stuff
-import {Component, SetModule} from 'angular2-now';
+import {Component} from '@angular/core';
 
 // import needed modules
 import {Person} from 'models/Person';
@@ -9,12 +9,10 @@ import {Person} from 'models/Person';
 // import stylesheet
 import './greeter.scss';
 
-// define module
-export default SetModule('greeter', []).name;
-
+// module's component
 @Component({
   selector: 'greeter',
-  bind: { person: '<' },
+  inputs: ['person'],
   template: require('./greeter.html'),
 })
 export class Greeter {
